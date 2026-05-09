@@ -5,6 +5,7 @@ const Navbar = () => {
     { name: 'início', href: '#home' },
     { name: 'sobre', href: '#about' },
     { name: 'projetos', href: '#projects' },
+    { name: 'loja', href: '#shop' },
     { name: 'contato', href: '#contact' },
   ]
 
@@ -28,9 +29,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center">
-          <button className={cnTokens.btnGhost + " px-5 py-2"}>
-            CV
-          </button>
+          {/* Botão removido conforme solicitado */}
         </div>
       </div>
     </nav>

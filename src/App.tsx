@@ -4,6 +4,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Terminal from './components/Terminal'
+import Shop from './components/Shop'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Hero />
           <About />
           <Projects />
+          <Shop />
           <Terminal />
           <Contact />
         </main>
