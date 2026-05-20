@@ -34,11 +34,11 @@ export const tokens = {
     mono: 'font-mono',
   },
   components: {
-    card: 'bg-background-card border border-border-default rounded-card shadow-card hover:border-teal/30 transition-all duration-300',
+    card: 'bg-background-card border border-border-default rounded-card shadow-card hover:border-teal transition-all duration-300',
     btnPrimary: 'bg-teal hover:bg-teal-light text-background-primary font-display font-semibold px-6 py-2.5 rounded-button transition-all duration-300 shadow-teal-glow hover:scale-[1.02]',
-    btnOutline: 'border border-border-strong text-teal hover:bg-teal/5 font-display font-semibold px-6 py-2.5 rounded-button transition-all duration-300',
-    btnGhost: 'border border-border-default text-text-secondary hover:text-teal hover:border-teal/50 font-mono text-[10px] uppercase tracking-widest px-6 py-2.5 rounded-button transition-all duration-300',
-    badgeTeal: 'bg-teal-muted text-teal-light border border-teal/20 font-mono text-[10px] px-2 py-0.5 rounded-tag',
+    btnOutline: 'border border-border-strong text-teal hover:bg-teal-light font-display font-semibold px-6 py-2.5 rounded-button transition-all duration-300',
+    btnGhost: 'border border-border-default text-text-secondary hover:text-teal hover:border-teal font-mono text-[10px] uppercase tracking-widest px-6 py-2.5 rounded-button transition-all duration-300',
+    badgeTeal: 'bg-teal-muted text-teal-light border border-teal font-mono text-[10px] px-2 py-0.5 rounded-tag',
     techPill: 'bg-background-surface border border-border-default text-text-secondary font-mono text-[11px] px-3 py-1 rounded-tag transition-all duration-300 hover:border-teal hover:text-teal',
   }
 } as const;

@@ -1,6 +1,11 @@
-import { cnTokens } from '../utils/tokens'
+import { Sun, Moon } from 'lucide-react'
 
-const Navbar = () => {
+type NavbarProps = {
+  theme: 'dark' | 'light'
+  onToggleTheme: () => void
+}
+
+const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
   const navLinks = [
     { name: 'início', href: '#home' },
     { name: 'sobre', href: '#about' },
@@ -28,8 +33,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="flex items-center">
-          {/* Botão removido conforme solicitado */}
+        <div className="flex items-center gap-6">
+          <button
+            onClick={onToggleTheme}
+            className="p-2 rounded-full hover:bg-teal/10 text-text-secondary hover:text-teal transition-all duration-300"
+            aria-label="Alternar tema"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
         </div>
       </div>
     </nav>

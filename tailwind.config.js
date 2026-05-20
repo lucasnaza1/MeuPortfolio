@@ -8,32 +8,24 @@ export default {
     extend: {
       colors: {
         background: {
-          primary: '#050505',
-          surface: '#0B0D0E',
-          card: '#0D1414',
+          primary: 'var(--bg-primary)',
+          surface: 'var(--bg-surface)',
+          card: 'var(--bg-card)',
         },
         teal: {
-          DEFAULT: '#14B8A6',
-          light: '#2DD4BF',
-          muted: 'rgba(20,184,166,0.1)',
-          glow: 'rgba(45,212,191,0.15)',
-        },
-        cyan: {
-          DEFAULT: '#06B6D4',
-          light: '#22D3EE',
-        },
-        slate: {
-          DEFAULT: '#94A3B8',
-          muted: '#475569',
+          DEFAULT: 'var(--teal)',
+          light: 'var(--teal-light)',
+          muted: 'var(--teal-muted)',
+          glow: 'var(--teal-glow)',
         },
         text: {
-          primary: '#F8FAFC',
-          secondary: '#94A3B8',
-          muted: '#475569',
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
         },
         border: {
-          default: 'rgba(20,184,166,0.1)',
-          strong: 'rgba(20,184,166,0.25)',
+          default: 'var(--border-default)',
+          strong: 'var(--border-strong)',
         }
       },
       fontFamily: {

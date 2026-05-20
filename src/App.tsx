@@ -6,15 +6,34 @@ import Contact from './components/Contact'
 import Terminal from './components/Terminal'
 import Shop from './components/Shop'
 
+import { useEffect, useState } from 'react'
+
 function App() {
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme') as 'dark' | 'light'
+      return saved || 'dark'
+    }
+    return 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+  }
+
   return (
-    <div className="min-h-screen bg-background-primary text-text-primary selection:bg-teal/30">
+    <div className="min-h-screen bg-background-primary text-text-primary selection:bg-teal selection:text-background-primary transition-colors duration-300">
       {/* Texture Layer */}
       <div className="fixed inset-0 bg-grid opacity-20 pointer-events-none z-0" />
       
       {/* Content */}
       <div className="relative z-10">
-        <Navbar />
+        <Navbar theme={theme} onToggleTheme={toggleTheme} />
         <main>
           <Hero />
           <About />

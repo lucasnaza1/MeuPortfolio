@@ -1,8 +1,29 @@
 import { motion } from 'framer-motion'
-import { cnTokens } from '../utils/tokens'
-import profileImg from '../assets/profile.jpg'
+import { useState } from 'react'
+
+const profileImgUrl = new URL('../assets/profile.jpg', import.meta.url).href
+
+const imgFallback =
+  'data:image/svg+xml,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" sto  p-color="#0B0D0E"/>
+          <stop offset="1" stop-color="#0D1414"/>
+        </linearGradient>
+      </defs>
+      <rect width="900" height="1200" fill="url(#g)"/>
+      <rect x="36" y="36" width="828" height="1128" rx="28" fill="none" stroke="rgba(20,184,166,0.35)" stroke-width="6"/>
+      <text x="50%" y="48%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" fill="#F8FAFC" font-weight="700">Lucas</text>
+      <text x="50%" y="56%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" fill="#14B8A6" font-weight="700">Nazário</text>
+      <text x="50%" y="64%" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#94A3B8">Substitua src/assets/profile.jpg pela sua foto</text>
+    </svg>`
+  )
 
 const About = () => {
+  const [imgSrc, setImgSrc] = useState(profileImgUrl)
+
   const skills = [
     { category: 'Backend', items: ['Node.js', 'Java', 'Python', 'APIs REST'] },
     { category: 'Frontend', items: ['React', 'React Native', 'Tailwind CSS'] },
@@ -31,11 +52,18 @@ const About = () => {
           <div className="absolute inset-0 border-2 border-teal rounded-card translate-x-4 translate-y-4 -z-10 opacity-20" />
           <div className="w-full h-full bg-background-surface border border-border-strong rounded-card overflow-hidden relative group">
             <img 
-              src={profileImg} 
+              src={imgSrc} 
               alt="Lucas Nazário" 
+              onError={() => {
+                setImgSrc(imgFallback)
+              }}
+              onLoad={(e) => {
+                const el = e.currentTarget
+                if (!el.naturalWidth || !el.naturalHeight) setImgSrc(imgFallback)
+              }}
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
             />
-            <div className="absolute inset-0 bg-teal/5 group-hover:bg-transparent transition-colors duration-500" />
+            <div className="absolute inset-0 bg-teal group-hover:bg-transparent transition-colors duration-500 opacity-5" />
           </div>
         </motion.div>
 
@@ -72,19 +100,13 @@ const About = () => {
                 <ul className="space-y-2">
                   {skillGroup.items.map((item) => (
                     <li key={item} className="text-sm text-text-muted flex items-center gap-2">
-                      <div className="w-1 h-1 bg-teal/40 rounded-full" />
+                      <div className="w-1 h-1 bg-teal rounded-full opacity-40" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
-          </div>
-
-          <div className="pt-8">
-            <button className={cnTokens.btnOutline}>
-              Ver Currículo Completo
-            </button>
           </div>
         </div>
       </div>

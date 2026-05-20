@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* Colors */
+  /* Dark Theme (Default) */
   --bg-primary: #050505;
   --bg-surface: #0B0D0E;
   --bg-card: #0D1414;
@@ -21,9 +21,27 @@
   --border-strong: rgba(20,184,166,0.25);
 }
 
+[data-theme="light"] {
+  --bg-primary: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-card: #F1F5F9;
+  
+  --teal: #0D9488;
+  --teal-light: #14B8A6;
+  --teal-muted: rgba(13,148,136,0.08);
+  --teal-glow: rgba(13,148,136,0.1);
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  
+  --border-default: rgba(13,148,136,0.15);
+  --border-strong: rgba(13,148,136,0.25);
+}
+
 @layer base {
   body {
-    @apply bg-background-primary text-text-primary font-body antialiased selection:bg-teal/30;
+    @apply bg-background-primary text-text-primary font-body antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -53,11 +71,11 @@
   }
 
   .card-teal {
-    @apply bg-background-card border border-border-default rounded-card shadow-card hover:border-teal/30 transition-all duration-300;
+    @apply bg-background-card border border-border-default rounded-card shadow-card hover:border-teal transition-all duration-300;
   }
 
   .badge-teal {
-    @apply bg-teal-muted text-teal-light border border-teal/20 font-mono text-[10px] px-2 py-0.5 rounded-tag;
+    @apply bg-teal-muted text-teal-light border border-teal font-mono text-[10px] px-2 py-0.5 rounded-tag;
   }
 
   .tech-pill {

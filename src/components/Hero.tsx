@@ -62,9 +62,6 @@ const Hero = () => {
           >
             Entrar em contato
           </a>
-          <button className={cnTokens.btnGhost}>
-            baixar_cv.pdf
-          </button>
         </motion.div>
 
         <motion.div
