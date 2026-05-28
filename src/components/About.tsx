@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
-const profileImgUrl = new URL('../assets/profile.jpg', import.meta.url).href
+const profileImgUrl = new URL('../assets/perfil.jpg', import.meta.url).href
 
 const imgFallback =
   'data:image/svg+xml,' +
