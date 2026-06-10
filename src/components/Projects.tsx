@@ -1,5 +1,6 @@
 import { cnTokens } from '../utils/tokens'
 import { motion } from 'framer-motion'
+import TechIcons from './TechIcons'
 
 const Projects = () => {
   const projects = [
@@ -19,21 +20,22 @@ const Projects = () => {
       ]
     },
     {
-      name: 'FridgeZero',
-      subtitle: 'Plataforma mobile anti-desperdício',
-      description: 'Plataforma mobile inteligente para reduzir desperdício de alimentos: cadastro por código de barras, OCR de notas fiscais e reconhecimento por imagem, com alertas de validade e sugestões de receitas com IA.',
+      name: 'ADS PERFORMANCE 4GT',
+      subtitle: 'Dashboard de Performance de Tráfego',
+      description: 'Dashboard completo para análise de performance de campanhas de tráfego pago, com métricas em tempo real, visualizações interativas e insights automatizados.',
       highlights: [
-        'Cadastro: manual, código de barras, OCR e reconhecimento por imagem',
-        'Alertas inteligentes de validade e controle de estoque doméstico',
-        'Sugestão de receitas baseada no que há na geladeira e despensa',
-        'Estatísticas, lista de compras e gamificação'
+        'Análise em tempo real de campanhas Google Ads e Meta Ads',
+        'Visualizações interativas com gráficos dinâmicos',
+        'Alertas automáticos de performance abaixo do esperado',
+        'Integração com GA4 e Google Tag Manager'
       ],
       stacks: [
-        'Flutter/React Native', 'Node.js', 'MVC', 'API REST', 'PostgreSQL', 
-        'Prisma', 'JWT/Firebase Auth', 'OpenAI/Gemini', 'Cloud Storage/S3', 'Docker/Coolify/VPS'
+        'React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL',
+        'Google Analytics 4', 'Google Tag Manager', 'Meta Ads API',
+        'Chart.js', 'Tailwind CSS', 'Docker'
       ],
       links: [
-        { label: 'Devpost', href: 'https://devpost.com/software/fridgeguard?utm_source=chatgpt.com' }
+        { label: 'Repositório', href: 'https://github.com/lucasnaza1/ads_performance-4GT' }
       ]
     }
   ]
@@ -85,7 +87,8 @@ const Projects = () => {
 
               <div className="space-y-4 pt-2">
                 <span className="font-mono text-[10px] text-text-muted uppercase tracking-widest block">Tecnologias</span>
-                <div className="flex flex-wrap gap-2">
+                <TechIcons technologies={project.stacks} size="md" className="mt-2" />
+                <div className="flex flex-wrap gap-2 mt-3">
                   {project.stacks.map((stack) => (
                     <span key={stack} className="tech-pill">
                       {stack}

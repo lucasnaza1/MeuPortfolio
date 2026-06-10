@@ -9,7 +9,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
   const navLinks = [
     { name: 'início', href: '#home' },
     { name: 'sobre', href: '#about' },
-    { name: 'projetos', href: '#projects' },
+    { name: 'experiência', href: '#experience' },
     { name: 'contato', href: '#contact' },
   ]
 

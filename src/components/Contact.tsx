@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { cnTokens } from '../utils/tokens'
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from './Icons'
 
 const Contact = () => {
   const contactEmail = 'lucasnazario.tech@gmail.com'
@@ -34,8 +35,9 @@ const Contact = () => {
               <span className="text-xs text-text-muted uppercase block mb-2 tracking-widest">Email</span>
               <a 
                 href={`mailto:${contactEmail}`}
-                className="text-xl text-text-primary hover:text-teal transition-colors duration-300 break-all"
+                className="text-xl text-text-primary hover:text-teal transition-colors duration-300 break-all flex items-center gap-3"
               >
+                <FaEnvelope className="text-teal" />
                 {contactEmail}
               </a>
             </div>
@@ -44,19 +46,21 @@ const Contact = () => {
               <span className="text-xs text-text-muted uppercase block mb-2 tracking-widest">Redes Sociais</span>
               <div className="flex flex-wrap gap-6">
                 <a 
-                  className="text-xl text-text-primary hover:text-teal transition-colors duration-300"
+                  className="text-xl text-text-primary hover:text-teal transition-colors duration-300 flex items-center gap-3"
                   href={linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <FaLinkedin className="text-teal" />
                   LinkedIn
                 </a>
                 <a 
-                  className="text-xl text-text-primary hover:text-teal transition-colors duration-300"
+                  className="text-xl text-text-primary hover:text-teal transition-colors duration-300 flex items-center gap-3"
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <FaGithub className="text-teal" />
                   GitHub
                 </a>
               </div>
@@ -81,25 +85,13 @@ const Contact = () => {
             href={whatsappUrl}
             target="_blank" 
             rel="noopener noreferrer" 
-            className={`${cnTokens.btnPrimary} w-full h-14 flex items-center justify-center font-mono text-sm uppercase tracking-widest transition-colors text-center`}
+            className={`${cnTokens.btnPrimary} w-full h-14 flex items-center justify-center gap-3 font-mono text-sm uppercase tracking-widest transition-colors text-center`}
           >
+            <FaWhatsapp className="text-xl" />
             Fale no WhatsApp
           </a>
         </motion.div>
       </div>
-
-      <footer className="mt-48 pt-12 border-t border-border-default flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-text-primary font-display font-bold text-2xl tracking-tighter">
-          naza<span className="text-teal">.dev</span>
-        </div>
-        <div className="font-mono text-[9px] text-text-muted uppercase tracking-widest text-center md:text-left">
-          © 2026 Lucas Nazário — Engenheiro Backend.
-        </div>
-        <div className="flex gap-8 font-mono text-[9px] text-text-muted uppercase tracking-widest">
-          <span className="cursor-pointer hover:text-teal transition-colors">Twitter</span>
-          <span className="cursor-pointer hover:text-teal transition-colors">Medium</span>
-        </div>
-      </footer>
     </section>
   )
 }

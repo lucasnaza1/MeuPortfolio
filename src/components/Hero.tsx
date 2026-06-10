@@ -71,15 +71,17 @@ const Hero = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto"
         >
           <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">
-            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Projetos</span>
+            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Experiência</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-bold text-teal">12+</span>
+              <span className="text-4xl font-display font-bold text-teal">+3 anos</span>
+              <span className="text-body text-text-secondary">em JavaScript</span>
             </div>
           </div>
           <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">
             <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Tecnologias</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-bold text-teal">9</span>
+              <span className="text-4xl font-display font-bold text-teal">+10</span>
+              <span className="text-body text-text-secondary">tecnologias</span>
             </div>
           </div>
           <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">

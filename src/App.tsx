@@ -1,9 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Projects from './components/Projects'
+import Experience from './components/Experience'
+import TicTacToe from './components/TicTacToe'
 import Contact from './components/Contact'
-import Terminal from './components/Terminal'
 
 import { useEffect, useState } from 'react'
 
@@ -36,10 +36,10 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Projects />
-          <Terminal />
+          <Experience />
           <Contact />
         </main>
+        <TicTacToe />
       </div>
     </div>
   )
