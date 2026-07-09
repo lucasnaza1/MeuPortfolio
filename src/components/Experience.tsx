@@ -5,46 +5,44 @@ import TechIcons from './TechIcons'
 const Experience = () => {
   const experiences = [
     {
-      period: '06/2026 – Presente',
-      title: 'Coordenador do Time de Tráfego',
-      company: '(JUN/2026 - PRESENTE) 4GrowthBR',
-      description: 'Liderança e coordenação do time de tráfego pago, responsável pela estratégia, otimização e análise de performance de campanhas em múltiplas plataformas.',
+      period: 'Jun/2026 – Atual',
+      title: 'Coordenador, Analista de Sistemas e Programador',
+      company: '4GrowthBR',
+      description: 'Atuação em codificação, modificação e compilação de programas focando na otimização de sistemas internos. Coordenação técnica de equipes e múltiplos projetos utilizando Git (GitFlow).',
       skills: [
-        'Liderança de equipe',
-        'Estratégia de campanhas',
-        'Otimização de performance',
-        'Análise de dados avançada',
-        'Gestão de orçamento',
-        'Relatórios executivos'
+        'TypeScript',
+        'React',
+        'Node.js',
+        'API REST',
+        'Git (GitFlow)',
+        'Dashboards',
+        'Liderança técnica'
       ],
       highlights: [
-        'Coordenação de equipe de Tráfego',
-        'Desenvolvimento de estratégias de crescimento',
-        'Otimização de ROI em campanhas',
-        'Implementação de processos ágeis'
+        'Desenvolvimento de dashboards e ferramentas internas de alta performance com TypeScript e React',
+        'Coordenação técnica de equipes e múltiplos projetos utilizando Git (GitFlow)',
+        'Criação e consumo de APIs REST, automação de dados e documentação técnica de requisitos',
+        'Codificação, modificação e compilação de programas com foco na otimização de sistemas internos'
       ]
     },
     {
-      period: '09/2025 – 05/2026',
-      title: 'Gestor de Tráfego',
-      company: '(SET/2025 - JUN/2026) 4GrowthBR',
-      description: 'Gestão completa de campanhas de tráfego pago com foco em performance, conversão e otimização contínua.',
+      period: 'Set/2025 – Jun/2026',
+      title: 'Programador, Analista de Dados e Especialista em Mídias',
+      company: '4GrowthBR',
+      description: 'Codificação de sistemas para monitoramento de indicadores e consolidação de dados em tempo real, com forte atuação em modelagem de banco de dados e automações.',
       skills: [
-        'Google Ads',
-        'Meta Ads',
-        'Google Analytics 4 (GA4)',
-        'Google Tag Manager (GTM)',
-        'API de Conversões',
-        'Pixel de Rastreamento',
-        'Análise de Dados',
-        'Elaboração de Dashboards',
-        'Otimização de Campanhas'
+        'TypeScript',
+        'SQL',
+        'POO',
+        'Clean Code',
+        'Testes Unitários',
+        'Automação de Dados',
+        'Análise de Dados'
       ],
       highlights: [
-        'Análise de Dados e Métricas de Marketing',
-        'Redução de 25% no CPA médio',
-        'Implementação de tracking server-side',
-        'Criação de dashboards automatizados'
+        'Codificação de sistemas para monitoramento de indicadores e consolidação de dados em tempo real',
+        'Implementação de testes unitários e refatoração de código com foco em POO e Clean Code',
+        'Modelagem de bancos de dados SQL e criação de automações para redução de processos manuais'
       ]
     },
     {

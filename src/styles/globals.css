@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-primary: #050505;
+    --background-secondary: #0D1117;
+    --background-tertiary: #161B22;
+    --background-surface: #1C2128;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border-default: #21262D;
+    --border-strong: #30363D;
+    --teal: #14B8A6;
+    --teal-light: #2DD4BF;
+    --teal-dark: #0D9488;
+  }
+
+  [data-theme="light"] {
+    --background-primary: #FFFFFF;
+    --background-secondary: #F6F8FA;
+    --background-tertiary: #EAEEF2;
+    --background-surface: #D0D7DE;
+    --text-primary: #1F2328;
+    --text-secondary: #59636E;
+    --text-muted: #818B98;
+    --border-default: #D0D7DE;
+    --border-strong: #AFB8C1;
+    --teal: #0D9488;
+    --teal-light: #14B8A6;
+    --teal-dark: #0F766E;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--teal);
+    color: var(--background-primary);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--teal);
+  }
+}
+
+@layer components {
+  .card-teal {
+    @apply bg-background-secondary border border-border-default rounded-card;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-teal:hover {
+    border-color: rgba(20, 184, 166, 0.5);
+    box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.2);
+  }
+
+  .terminal-block {
+    @apply bg-background-secondary border border-border-default rounded-card p-6;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .tech-pill {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-mono;
+    background-color: var(--background-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-default);
+  }
+
+  .badge-teal {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest font-bold;
+    background-color: rgba(20, 184, 166, 0.1);
+    color: var(--teal);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+  }
+}
