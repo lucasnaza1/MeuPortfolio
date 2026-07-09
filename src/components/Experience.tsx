@@ -8,7 +8,7 @@ const Experience = () => {
       period: 'Jun/2026 – Atual',
       title: 'Coordenador, Analista de Sistemas e Programador',
       company: '4GrowthBR',
-      description: 'Atuação em codificação, modificação e compilação de programas focando na otimização de sistemas internos. Coordenação técnica de equipes e múltiplos projetos utilizando Git (GitFlow).',
+      description: 'Atuação full-cycle em desenvolvimento de software: codificação, modificação e compilação de programas, coordenação técnica de equipes e desenvolvimento de dashboards e APIs de alta performance.',
       skills: [
         'TypeScript',
         'React',
@@ -19,17 +19,17 @@ const Experience = () => {
         'Liderança técnica'
       ],
       highlights: [
-        'Desenvolvimento de dashboards e ferramentas internas de alta performance com TypeScript e React',
+        'Codificação, modificação e compilação de programas focando na otimização de sistemas internos',
         'Coordenação técnica de equipes e múltiplos projetos utilizando Git (GitFlow)',
-        'Criação e consumo de APIs REST, automação de dados e documentação técnica de requisitos',
-        'Codificação, modificação e compilação de programas com foco na otimização de sistemas internos'
+        'Desenvolvimento de dashboards e ferramentas internas de alta performance com TypeScript e React',
+        'Criação e consumo de APIs REST, automação de dados e documentação técnica de requisitos'
       ]
     },
     {
       period: 'Set/2025 – Jun/2026',
       title: 'Programador, Analista de Dados e Especialista em Mídias',
       company: '4GrowthBR',
-      description: 'Codificação de sistemas para monitoramento de indicadores e consolidação de dados em tempo real, com forte atuação em modelagem de banco de dados e automações.',
+      description: 'Desenvolvimento de sistemas de monitoramento, análise de dados e automações com foco em qualidade de código (POO, Clean Code) e modelagem de banco de dados.',
       skills: [
         'TypeScript',
         'SQL',
