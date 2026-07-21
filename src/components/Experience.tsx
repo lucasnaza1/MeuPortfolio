@@ -5,66 +5,90 @@ import TechIcons from './TechIcons'
 const Experience = () => {
   const experiences = [
     {
-      period: 'Jun/2026 – Atual',
-      title: 'Coordenador, Analista de Sistemas e Programador',
-      company: '4GrowthBR',
-      description: 'Atuação full-cycle em desenvolvimento de software: codificação, modificação e compilação de programas, coordenação técnica de equipes e desenvolvimento de dashboards e APIs de alta performance.',
+      period: 'Set/2025 – Atual',
+      title: 'Dev Full Stack, Engenheiro de Growth (MarTech) e Coord. Time de Tráfego',
+      company: '4GrowthBR — Sergipe, Brasil',
+      description: 'Desenvolvedor Full Stack com atuação em arquitetura de APIs REST, integrações e automações. Entrego soluções escaláveis unindo engenharia de software, MarTech e liderança técnica.',
       skills: [
         'TypeScript',
-        'React',
         'Node.js',
+        'React',
+        'SQL',
         'API REST',
-        'Git (GitFlow)',
-        'Dashboards',
-        'Liderança técnica'
+        'n8n',
+        'Make',
+        'GitFlow',
+        'Clean Code'
       ],
       highlights: [
-        'Codificação, modificação e compilação de programas focando na otimização de sistemas internos',
-        'Coordenação técnica de equipes e múltiplos projetos utilizando Git (GitFlow)',
-        'Desenvolvimento de dashboards e ferramentas internas de alta performance com TypeScript e React',
-        'Criação e consumo de APIs REST, automação de dados e documentação técnica de requisitos'
+        'Desenvolvimento de aplicações Full Stack com TypeScript, Node.js, React e SQL',
+        'Desenvolvimento e integração de APIs REST, automações e soluções com n8n, Make e Google Apps Script',
+        'Criação de dashboards, ferramentas internas e sistemas para processamento e monitoramento de dados',
+        'Modelagem de banco de dados, arquitetura de software e aplicação de boas práticas (Clean Code e GitFlow)',
+        'Desenvolvimento de soluções MarTech, integrando Meta Ads, Google Ads, GA4, GTM, CRMs e outras plataformas',
+        'Atuação como Engenheiro de Growth, automatizando processos e integrações para marketing e vendas',
+        'Coordenação técnica e liderança do time de tráfego, definindo processos, indicadores e apoiando o desenvolvimento de soluções'
       ]
     },
     {
-      period: 'Set/2025 – Jun/2026',
-      title: 'Programador, Analista de Dados e Especialista em Mídias',
-      company: '4GrowthBR',
-      description: 'Desenvolvimento de sistemas de monitoramento, análise de dados e automações com foco em qualidade de código (POO, Clean Code) e modelagem de banco de dados.',
+      period: 'Projeto Corporativo',
+      title: 'ADS Performance',
+      subtitle: 'Dashboard de Monitoramento de Marketing',
+      description: 'Dashboard de monitoramento em tempo real para indicadores de marketing, integrado às APIs da Meta Ads e Google Ads.',
       skills: [
         'TypeScript',
-        'SQL',
-        'POO',
-        'Clean Code',
-        'Testes Unitários',
-        'Automação de Dados',
-        'Análise de Dados'
+        'Node.js',
+        'React',
+        'MySQL',
+        'API REST',
+        'Meta Ads API',
+        'Google Ads API'
       ],
       highlights: [
-        'Codificação de sistemas para monitoramento de indicadores e consolidação de dados em tempo real',
-        'Implementação de testes unitários e refatoração de código com foco em POO e Clean Code',
-        'Modelagem de bancos de dados SQL e criação de automações para redução de processos manuais'
+        'Monitoramento em tempo real de indicadores de marketing',
+        'Integração com APIs da Meta Ads e Google Ads',
+        'Processamento e consolidação de dados de campanhas',
+        'Dashboards interativos para análise de performance'
       ]
+    },
+    {
+      period: 'Projeto Pessoal',
+      title: 'SateliteAds',
+      subtitle: 'Monitoramento de Saúde de Contas de Anúncios',
+      description: 'Plataforma para monitoramento da saúde de contas de anúncios com integrações, alertas automáticos e dashboards.',
+      skills: [
+        'TypeScript',
+        'Node.js',
+        'React',
+        'Prisma',
+        'MySQL',
+        'Meta Ads API',
+        'Google Ads API'
+      ],
+      highlights: [
+        'Monitoramento da saúde de contas de anúncios',
+        'Alertas automáticos de anomalias e quedas de performance',
+        'Integração com Meta Ads API e Google Ads API',
+        'Dashboards em tempo real com Prisma ORM'
+      ],
+      link: 'https://github.com/lucasnaza1'
     },
     {
       period: 'Projeto Pessoal',
       title: 'SingaStore',
       subtitle: 'E-commerce Full Stack — Tema League of Legends',
-      description: 'E-commerce fictício inspirado no campeão Singed (League of Legends), com estética de laboratório químico de Zaun. Arquitetura full-stack moderna com catálogo, carrinho persistente e galeria de skins.',
+      description: 'E-commerce Full Stack inspirado no universo de League of Legends, com autenticação, gerenciamento de produtos e pedidos via API REST.',
       skills: [
         'React',
-        'TypeScript',
-        'Vite',
-        'Tailwind CSS',
         'Node.js',
-        'Express',
+        'TypeScript',
         'MySQL',
         'Docker',
-        'Zustand',
-        'React Router'
+        'API REST'
       ],
       highlights: [
+        'Autenticação e gerenciamento de produtos e pedidos via API REST',
         'Catálogo com filtros, busca, ordenação e paginação',
-        '14 produtos fictícios temáticos + galeria de 13 skins oficiais',
         'Carrinho persistente (localStorage) com checkout simulado',
         'API REST com Express, MySQL e Docker Compose'
       ],
@@ -72,24 +96,22 @@ const Experience = () => {
     },
     {
       period: 'Projeto Pessoal',
-      title: 'ADS Performance',
-      subtitle: 'Dashboard de Performance de Tráfego',
-      description: 'Dashboard completo para análise de performance de campanhas de tráfego pago, com métricas em tempo real, visualizações interativas e insights automatizados.',
+      title: 'FipeSearch',
+      subtitle: 'Consulta de Preços de Veículos',
+      description: 'Aplicação em Java para consulta de preços de veículos consumindo a API da FIPE.',
       skills: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Sheets',
-        'Meta API',
-        'Google AppScript'
+        'Java',
+        'HTTP Client',
+        'JSON',
+        'API REST'
       ],
       highlights: [
-        'Análise em tempo real de campanhas Google Ads e Meta Ads',
-        'Visualizações interativas com gráficos dinâmicos',
-        'Alertas automáticos de performance abaixo do esperado',
-        'Integração com GA4 e Google Tag Manager'
+        'Consulta de preços de veículos via API da FIPE',
+        'Aplicação desktop em Java com HTTP Client',
+        'Consumo e parsing de dados JSON',
+        'Integração com API REST externa'
       ],
-      link: 'https://github.com/lucasnaza1/ads_performance-4GT'
+      link: 'https://github.com/lucasnaza1'
     }
   ]
 

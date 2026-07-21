@@ -55,6 +55,18 @@ const techIconMap: Record<string, React.ReactNode> = {
   'MySQL': <Icons.SiMysql className="text-blue-500" />,
   'Zustand': <Icons.SiRedux className="text-orange-500" />,
   'React Router': <Icons.SiReactrouter className="text-red-500" />,
+  
+  // Currículo Technologies
+  'Java': <Icons.FaJava className="text-orange-600" />,
+  'n8n': <Icons.FaServer className="text-pink-500" />,
+  'Make': <Icons.FaServer className="text-purple-400" />,
+  'HTTP Client': <Icons.FaServer className="text-teal-400" />,
+  'JSON': <Icons.FaCode className="text-yellow-500" />,
+  'GitFlow': <Icons.FaGitAlt className="text-orange-500" />,
+  'Clean Code': <Icons.FaCode className="text-green-400" />,
+  'Meta Ads API': <Icons.FaServer className="text-blue-500" />,
+  'Google Ads API': <Icons.FaServer className="text-red-500" />,
+  'Spring Boot': <Icons.FaCode className="text-green-600" />,
 }
 
 const TechIcons = ({ technologies = [], size = 'md', className = '' }: TechIconsProps) => {
