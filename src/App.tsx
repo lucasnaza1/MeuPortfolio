@@ -4,7 +4,7 @@ import About from './components/About'
 import Experience from './components/Experience'
 import TicTacToe from './components/TicTacToe'
 import Contact from './components/Contact'
-import BioPage from './pages/BioPage'
+import BioPage from './components/BioPage'
 
 import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
