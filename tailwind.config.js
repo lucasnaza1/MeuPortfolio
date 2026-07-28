@@ -28,6 +28,15 @@ export default {
           default: '#21262D',
           strong: '#30363D',
         },
+        bio: {
+          orange: '#ea6a13',
+          purple: '#250a2b',
+          yellow: '#ffe3a4',
+          muted:  '#a89fac',
+          white:  '#f0f0f0',
+          card:   'rgba(58, 26, 63, 0.72)',
+          line:   'rgba(240, 240, 240, 0.14)',
+        },
       },
       fontFamily: {
         display: ['Space Grotesk', 'sans-serif'],
