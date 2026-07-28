@@ -2,6 +2,7 @@ import { bio } from '../content/bio'
 import { FaLinkedinIn, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { motion, type Variants } from 'framer-motion'
+import { useEffect } from 'react'
 
 const iconMap = {
   linkedin: FaLinkedinIn,
@@ -48,6 +49,36 @@ const ctaHover = {
 }
 
 const BioPage = () => {
+  // Atualiza title e meta description ao montar
+  useEffect(() => {
+    const prevTitle = document.title
+    const prevDescription = document
+      .querySelector('meta[name="description"]')
+      ?.getAttribute('content')
+
+    document.title = `${bio.title} — ${bio.role} | Bio`
+
+    const meta = document.querySelector('meta[name="description"]')
+    if (meta) {
+      meta.setAttribute(
+        'content',
+        `${bio.role} • ${bio.intro.slice(0, 140)}`
+      )
+    } else {
+      const newMeta = document.createElement('meta')
+      newMeta.name = 'description'
+      newMeta.content = `${bio.role} • ${bio.intro.slice(0, 140)}`
+      document.head.appendChild(newMeta)
+    }
+
+    return () => {
+      document.title = prevTitle
+      if (prevDescription && meta) {
+        meta.setAttribute('content', prevDescription)
+      }
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-bio-purple text-bio-white font-['Host_Grotesk',sans-serif] relative overflow-x-hidden">
       {/* === Background layers === */}
@@ -84,10 +115,14 @@ const BioPage = () => {
         <header className="px-5 sm:px-10 py-5 sm:py-6 flex items-center justify-between">
           <Link
             to="/"
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-bio-orange flex items-center justify-center text-bio-orange hover:bg-bio-orange/10 transition-colors shrink-0"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-bio-orange flex items-center justify-center text-bio-orange hover:bg-bio-orange/10 transition-colors shrink-0 overflow-hidden"
             title="Voltar ao Portfólio"
           >
-            <span className="text-base sm:text-lg font-bold">N</span>
+            <img
+              src="/bio-assets/logo.svg"
+              alt="NazaDev"
+              className="w-full h-full object-cover"
+            />
           </Link>
           <Link
             to="/"
@@ -111,9 +146,11 @@ const BioPage = () => {
               className="w-24 h-24 sm:w-36 sm:h-36 rounded-[1.75rem] sm:rounded-[2.1rem] border-2 border-bio-orange overflow-hidden relative"
               style={{ boxShadow: '8px 8px 0px 0px rgba(234,106,19,0.5)' }}
             >
-              <div className="w-full h-full bg-gradient-to-br from-bio-orange/30 to-bio-purple flex items-center justify-center">
-                <span className="text-4xl sm:text-5xl font-bold text-bio-white">LN</span>
-              </div>
+              <img
+                src="/bio-assets/profile.svg"
+                alt={bio.title}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Textos */}

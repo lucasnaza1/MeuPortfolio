@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square -->
+  <rect width="120" height="120" rx="28" fill="#250a2b"/>
+  <!-- Outer ring -->
+  <circle cx="60" cy="60" r="48" stroke="#ea6a13" stroke-width="3" fill="none" opacity="0.4"/>
+  <!-- Inner shape - Anvil (forja) stylized -->
+  <path d="M30 50 H90 V58 H72 V66 H78 V74 H42 V66 H48 V58 H30 Z" fill="#ea6a13"/>
+  <!-- Base -->
+  <rect x="48" y="74" width="24" height="10" rx="2" fill="#ea6a13"/>
+  <rect x="42" y="84" width="36" height="6" rx="3" fill="#ea6a13" opacity="0.8"/>
+  <!-- Spark/star accent -->
+  <path d="M60 18 L63 27 L72 24 L66 32 L72 40 L63 37 L60 46 L57 37 L48 40 L54 32 L48 24 L57 27 Z" fill="#ffe3a4" opacity="0.9"/>
+</svg>
