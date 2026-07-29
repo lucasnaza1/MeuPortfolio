@@ -147,7 +147,7 @@ const BioPage = () => {
               style={{ boxShadow: '8px 8px 0px 0px rgba(234,106,19,0.5)' }}
             >
               <img
-                src="/bio-assets/profile.svg"
+                src="/bio-assets/profile.jpeg"
                 alt={bio.title}
                 className="w-full h-full object-cover"
               />
