@@ -143,8 +143,8 @@ const BioPage = () => {
           <div className="flex flex-col items-start gap-6 sm:gap-8">
             {/* Foto */}
             <div
-              className="w-24 h-24 sm:w-36 sm:h-36 rounded-[1.75rem] sm:rounded-[2.1rem] border-2 border-bio-orange overflow-hidden relative"
-              style={{ boxShadow: '8px 8px 0px 0px rgba(234,106,19,0.5)' }}
+              className="w-20 h-20 sm:w-36 sm:h-36 rounded-[1.5rem] sm:rounded-[2.1rem] border-2 border-bio-orange overflow-hidden relative ml-1"
+              style={{ boxShadow: '6px 6px 0px 0px rgba(234,106,19,0.5)' }}
             >
               <img
                 src="/bio-assets/profile.jpeg"
@@ -155,13 +155,13 @@ const BioPage = () => {
 
             {/* Textos */}
             <div className="flex flex-col gap-4 sm:gap-5 max-w-2xl">
-              <p className="text-bio-yellow text-[10px] sm:text-sm uppercase tracking-[0.15em] font-['Roboto',sans-serif] font-medium leading-relaxed">
+              <p className="text-bio-yellow text-[9px] sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.15em] font-['Roboto',sans-serif] font-medium leading-relaxed">
                 {bio.eyebrow}
               </p>
-              <h1 className="text-4xl sm:text-6xl font-bold text-bio-white leading-[1.1] sm:leading-tight">
+              <h1 className="text-[2rem] sm:text-6xl font-bold text-bio-white leading-[1.1] sm:leading-tight">
                 {bio.title}
               </h1>
-              <p className="text-bio-white/86 text-base sm:text-lg leading-relaxed">
+              <p className="text-bio-white/86 text-sm sm:text-lg leading-relaxed">
                 {bio.intro}
               </p>
 
@@ -213,10 +213,10 @@ const BioPage = () => {
           className="max-w-4xl mx-auto px-5 sm:px-10 py-12 sm:py-16"
         >
           <div className="mb-8 sm:mb-10">
-            <p className="text-bio-muted text-xs sm:text-sm uppercase tracking-wider mb-2 sm:mb-3 font-['Roboto',sans-serif]">
+            <p className="text-bio-muted text-[10px] sm:text-sm uppercase tracking-wider mb-2 sm:mb-3 font-['Roboto',sans-serif]">
               Como posso ajudar
             </p>
-            <h2 className="text-2xl sm:text-4xl font-bold text-bio-white leading-tight">
+            <h2 className="text-xl sm:text-4xl font-bold text-bio-white leading-tight">
               Três frentes. Uma visão de negócio.
             </h2>
           </div>
@@ -271,30 +271,30 @@ const BioPage = () => {
           variants={sectionVariants}
           className="max-w-4xl mx-auto px-5 sm:px-10 py-12 sm:py-16"
         >
-          <p className="text-bio-yellow text-xs sm:text-sm uppercase tracking-[0.15em] font-['Roboto',sans-serif] font-medium mb-3 sm:mb-4">
+          <p className="text-bio-yellow text-[10px] sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.15em] font-['Roboto',sans-serif] font-medium mb-3 sm:mb-4">
             {bio.authorityKicker}
           </p>
-          <h2 className="text-2xl sm:text-4xl font-bold text-bio-white mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-xl sm:text-4xl font-bold text-bio-white mb-4 sm:mb-6 leading-tight">
             {bio.authorityTitle}
           </h2>
-          <p className="text-bio-muted text-base sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl">
+          <p className="text-bio-muted text-sm sm:text-lg leading-relaxed mb-8 sm:mb-10 max-w-2xl">
             {bio.authorityText}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             {bio.signals.map((signal, i) => (
               <div
                 key={i}
-                className={`flex-1 pb-5 sm:pb-6 ${
+                className={`flex-1 pb-4 sm:pb-6 ${
                   i < bio.signals.length - 1
                     ? 'sm:border-r sm:border-bio-line sm:pr-6 border-b border-bio-line sm:border-b-0'
                     : ''
                 }`}
               >
-                <p className="text-bio-orange text-lg sm:text-xl font-bold mb-1">
+                <p className="text-bio-orange text-base sm:text-xl font-bold mb-1">
                   {signal.value}
                 </p>
-                <p className="text-bio-muted text-xs sm:text-sm font-['Roboto',sans-serif]">
+                <p className="text-bio-muted text-[11px] sm:text-sm font-['Roboto',sans-serif]">
                   {signal.label}
                 </p>
               </div>
@@ -310,13 +310,13 @@ const BioPage = () => {
           variants={sectionVariants}
           className="max-w-4xl mx-auto px-5 sm:px-10 py-12 sm:py-16"
         >
-          <p className="text-bio-muted text-xs sm:text-sm uppercase tracking-wider mb-2 sm:mb-3 font-['Roboto',sans-serif]">
+          <p className="text-bio-muted text-[10px] sm:text-sm uppercase tracking-wider mb-2 sm:mb-3 font-['Roboto',sans-serif]">
             Vamos conversar
           </p>
-          <h2 className="text-2xl sm:text-4xl font-bold text-bio-white mb-3 sm:mb-4 leading-tight">
+          <h2 className="text-xl sm:text-4xl font-bold text-bio-white mb-3 sm:mb-4 leading-tight">
             Tem um problema bom para resolver?
           </h2>
-          <p className="text-bio-muted text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+          <p className="text-bio-muted text-sm sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-2xl">
             Se você busca alguém que entenda tecnologia e negócio na mesma
             conversa, me conte o contexto. Avalio pessoalmente cada projeto.
           </p>

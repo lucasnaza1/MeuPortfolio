@@ -34,45 +34,45 @@ export interface BioContent {
 }
 
 export const bio: BioContent = {
-  role: 'Full Stack Developer',
-  eyebrow: 'FULL STACK DEVELOPER · TECNOLOGIA APLICADA AO CRESCIMENTO',
+  role: 'Desenvolvedor Full Stack · Analista de Sistemas · Automações e IA',
+  eyebrow: 'DESENVOLVEDOR FULL STACK · ANALISTA DE SISTEMAS · AUTOMAÇÕES E IA',
   title: 'Lucas Nazário',
   intro:
-    'Desenvolvo software full stack e gerencio tráfego pago para empresas que querem crescer com mais eficiência e controle — do código à aquisição de clientes.',
-  availability: 'Disponível para projeto selecionados e contratos recorrentes',
+    'Desenvolvedor Full Stack • Co-fundador na ForjaCorp • Analista e Desenvolvedor de Sistemas',
+  availability: 'Disponível para projetos selecionados e contratos recorrentes',
   whatsappHref:
     'https://wa.me/5592988174112?text=Vim%20pelo%20seu%20bio%2C%20quero%20falar%20sobre%20um%20projeto',
   services: [
     {
       number: '01',
-      title: 'Desenvolvimento de software',
+      title: 'Desenvolvimento Full Stack',
       description:
-        'Sistemas, APIs e plataformas construídos para resolver problemas reais — do backend em Java/Spring ao frontend em React/Next.js.',
-      tags: ['Java', 'Spring Boot', 'React', 'Next.js', 'Node.js'],
+        'Sistemas, APIs e plataformas construídos com Spring, React Native, Next.js e TypeScript — do backend ao frontend.',
+      tags: ['Spring', 'React Native', 'Next.js', 'TypeScript'],
     },
     {
       number: '02',
-      title: 'Tráfego pago',
+      title: 'Infraestrutura e automação',
       description:
-        'Campanhas e otimização orientadas por dados, com foco em performance e eficiência de investimento.',
-      tags: ['Google Ads', 'Meta Ads'],
+        'Deploys, pipelines, integrações e automações com IA que reduzem trabalho manual e mantêm o sistema rodando sem fricção.',
+      tags: ['Docker', 'Coolify', 'CI/CD', 'Automações', 'IA'],
     },
     {
       number: '03',
-      title: 'Infraestrutura e automação',
+      title: 'Tráfego pago e e-mail marketing',
       description:
-        'Deploys, pipelines e integrações que reduzem trabalho manual e mantêm o sistema rodando sem fricção.',
-      tags: ['Docker', 'Coolify', 'CI/CD', 'GitHub Webhooks'],
+        'Campanhas, automação de e-mail marketing e otimização orientada por dados, com foco em performance e eficiência de investimento.',
+      tags: ['Google Ads', 'Meta Ads', 'E-mail Marketing'],
     },
   ],
   authorityKicker: 'EXPERIÊNCIA MULTIDISCIPLINAR',
   authorityTitle: 'Execução técnica com visão de produto.',
   authorityText:
-    'Minha experiência passa por desenvolvimento full stack, gestão de tráfego pago e infraestrutura de deploy. Enxergo tecnologia, marketing e operação como partes do mesmo sistema.',
+    'Minha experiência passa por desenvolvimento full stack, automações com IA e infraestrutura de deploy. Enxergo tecnologia, marketing e operação como partes do mesmo sistema.',
   signals: [
-    { value: 'Full Stack', label: 'Java/Spring, Node.js, React, Next.js' },
+    { value: 'Full Stack', label: 'Spring, React Native, Next.js, TypeScript' },
     { value: 'Co-fundador', label: 'ForjaCorp' },
-    { value: '4GrowthBR', label: 'Systems Analyst & Ads Performance' },
+    { value: 'Spider ADS', label: 'Systems Analyst & Ads Performance' },
   ],
   contacts: [
     {
