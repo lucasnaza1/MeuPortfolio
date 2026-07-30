@@ -111,7 +111,8 @@ const Experience = () => {
         'Interface moderna com histórico de buscas e favoritos',
         'Backend original em Java reaproveitado como API'
       ],
-      link: 'https://github.com/lucasnaza1'
+      frontendLink: 'https://github.com/lucasnaza1/FipeSearchMobile',
+      backendLink: 'https://github.com/lucasnaza1/FipeSearch'
     }
   ]
 
@@ -198,7 +199,34 @@ const Experience = () => {
                 </div>
               </div>
 
-              {exp.link && (
+              {exp.frontendLink && exp.backendLink ? (
+                <div className="mt-6 flex flex-wrap gap-4">
+                  <a
+                    href={exp.frontendLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-teal hover:text-teal-light font-bold transition-colors"
+                  >
+                    Ver Frontend
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7" />
+                      <path d="M7 7h10v10" />
+                    </svg>
+                  </a>
+                  <a
+                    href={exp.backendLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-teal hover:text-teal-light font-bold transition-colors"
+                  >
+                    Ver Backend
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7" />
+                      <path d="M7 7h10v10" />
+                    </svg>
+                  </a>
+                </div>
+              ) : exp.link && (
                 <a
                   href={exp.link}
                   target="_blank"
