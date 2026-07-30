@@ -97,19 +97,20 @@ const Experience = () => {
     {
       period: 'Projeto Pessoal',
       title: 'FipeSearch',
-      subtitle: 'App Mobile de Consulta de Veículos',
-      description: 'Aplicação mobile em React Native para consulta de preços de veículos consumindo a API da FIPE. Interface moderna com histórico de buscas e favoritos.',
+      subtitle: 'App Mobile + API Java de Consulta de Veículos',
+      description: 'Aplicação mobile em React Native com API REST totalmente em Java/Spring Boot para consulta de preços de veículos consumindo a API da FIPE.',
       skills: [
         'React Native',
         'TypeScript',
-        'API REST',
-        'Expo'
+        'Java',
+        'Spring Boot',
+        'API REST'
       ],
       highlights: [
         'App mobile multiplataforma (iOS/Android) com React Native',
+        'API REST totalmente em Java com Spring Boot',
         'Consulta de preços de veículos via API da FIPE',
-        'Interface moderna com histórico de buscas e favoritos',
-        'Backend original em Java reaproveitado como API'
+        'Interface moderna com histórico de buscas e favoritos'
       ],
       frontendLink: 'https://github.com/lucasnaza1/FipeSearchMobile',
       backendLink: 'https://github.com/lucasnaza1/FipeSearch'
