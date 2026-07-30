@@ -97,19 +97,19 @@ const Experience = () => {
     {
       period: 'Projeto Pessoal',
       title: 'FipeSearch',
-      subtitle: 'Consulta de Preços de Veículos',
-      description: 'Aplicação em Java para consulta de preços de veículos consumindo a API da FIPE.',
+      subtitle: 'App Mobile de Consulta de Veículos',
+      description: 'Aplicação mobile em React Native para consulta de preços de veículos consumindo a API da FIPE. Interface moderna com histórico de buscas e favoritos.',
       skills: [
-        'Java',
-        'HTTP Client',
-        'JSON',
-        'API REST'
+        'React Native',
+        'TypeScript',
+        'API REST',
+        'Expo'
       ],
       highlights: [
+        'App mobile multiplataforma (iOS/Android) com React Native',
         'Consulta de preços de veículos via API da FIPE',
-        'Aplicação desktop em Java com HTTP Client',
-        'Consumo e parsing de dados JSON',
-        'Integração com API REST externa'
+        'Interface moderna com histórico de buscas e favoritos',
+        'Backend original em Java reaproveitado como API'
       ],
       link: 'https://github.com/lucasnaza1'
     }
