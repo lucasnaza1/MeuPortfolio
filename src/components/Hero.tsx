@@ -68,26 +68,20 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-16 max-w-3xl mx-auto"
         >
           <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">
-            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Experiência</span>
+            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest group-hover:text-white transition-colors duration-200">Experiência</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-bold text-teal">+3 anos</span>
-              <span className="text-body text-text-secondary">em JavaScript</span>
+              <span className="text-4xl font-display font-bold text-teal group-hover:text-white transition-colors duration-200">+3 Anos</span>
+              <span className="text-body text-text-secondary group-hover:text-white transition-colors duration-200">de Experiência</span>
             </div>
           </div>
           <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">
-            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Tecnologias</span>
+            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest group-hover:text-white transition-colors duration-200">Tecnologias</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-bold text-teal">+10</span>
-              <span className="text-body text-text-secondary">tecnologias</span>
-            </div>
-          </div>
-          <div className="terminal-block text-left group hover:border-teal/50 transition-colors duration-300">
-            <span className="font-mono text-[10px] text-text-muted uppercase mb-4 block tracking-widest">Commits</span>
-            <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-display font-bold text-teal">400+</span>
+              <span className="text-4xl font-display font-bold text-teal group-hover:text-white transition-colors duration-200">+15</span>
+              <span className="text-body text-text-secondary group-hover:text-white transition-colors duration-200">tecnologias</span>
             </div>
           </div>
         </motion.div>

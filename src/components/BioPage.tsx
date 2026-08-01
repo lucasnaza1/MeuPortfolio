@@ -1,5 +1,6 @@
 import { bio } from '../content/bio'
 import { FaLinkedinIn, FaInstagram, FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
+import { RiTwitterXFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { motion, type Variants } from 'framer-motion'
 import { useEffect } from 'react'
@@ -9,6 +10,7 @@ const iconMap = {
   instagram: FaInstagram,
   github: FaGithub,
   mail: FaEnvelope,
+  twitter: RiTwitterXFill,
 }
 
 // === Animation variants ===
@@ -176,7 +178,7 @@ const BioPage = () => {
             </a>
 
             <p className="text-bio-muted text-[11px] sm:text-sm font-['Roboto',sans-serif]">
-              Conte seu cenário. Eu respondo pessoalmente.
+              {bio.ctaSubtext}
             </p>
           </div>
         </motion.section>
@@ -191,10 +193,10 @@ const BioPage = () => {
         >
           <div className="mb-6 sm:mb-10 text-center">
             <p className="text-bio-muted text-[10px] sm:text-sm uppercase tracking-wider mb-2 font-['Roboto',sans-serif]">
-              Como posso ajudar
+              {bio.servicesKicker}
             </p>
             <h2 className="text-lg sm:text-3xl font-bold text-bio-white leading-tight">
-              Três frentes. Uma visão de negócio.
+              {bio.servicesTitle}
             </h2>
           </div>
 
@@ -287,14 +289,13 @@ const BioPage = () => {
         >
           <div className="text-center mb-6 sm:mb-8">
             <p className="text-bio-muted text-[10px] sm:text-sm uppercase tracking-wider mb-2 font-['Roboto',sans-serif]">
-              Vamos conversar
+              {bio.contactKicker}
             </p>
             <h2 className="text-lg sm:text-3xl font-bold text-bio-white mb-3 leading-tight">
-              Tem um problema bom para resolver?
+              {bio.contactTitle}
             </h2>
             <p className="text-bio-muted text-sm sm:text-base leading-relaxed max-w-lg mx-auto">
-              Se você busca alguém que entenda tecnologia e negócio na mesma
-              conversa, me conte o contexto. Avalio pessoalmente cada projeto.
+              {bio.contactText}
             </p>
           </div>
 

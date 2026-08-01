@@ -17,7 +17,8 @@ import {
   FaWhatsapp,
   FaEnvelope,
   FaTwitter,
-  FaMedium
+  FaMedium,
+  FaInstagram
 } from 'react-icons/fa'
 
 import { 
@@ -62,6 +63,7 @@ export {
   FaEnvelope,
   FaTwitter,
   FaMedium,
+  FaInstagram,
   SiTypescript,
   SiNextdotjs,
   SiExpress,

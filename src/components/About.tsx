@@ -54,6 +54,9 @@ const About = () => {
             <img 
               src={imgSrc} 
               alt="Lucas Nazário" 
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
               onError={() => {
                 setImgSrc(imgFallback)
               }}
@@ -100,7 +103,7 @@ const About = () => {
                 </span>
                 <ul className="space-y-2">
                   {skillGroup.items.map((item) => (
-                    <li key={item} className="text-sm text-text-muted flex items-center gap-2">
+                    <li key={item} className="text-sm text-text-muted flex items-center gap-2 transition-colors duration-200 hover:text-white cursor-default">
                       <div className="w-1 h-1 bg-teal rounded-full opacity-40" />
                       {item}
                     </li>

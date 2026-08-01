@@ -2,40 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   TEMA: MINT DARK
+   ============================================ */
+
 @layer base {
   :root {
-    --background-primary: #050505;
-    --background-secondary: #0D1117;
-    --background-tertiary: #161B22;
-    --background-surface: #1C2128;
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748B;
-    --border-default: #21262D;
-    --border-strong: #30363D;
-    --teal: #14B8A6;
-    --teal-light: #2DD4BF;
-    --teal-dark: #0D9488;
+    --background-primary: #070809;
+    --background-secondary: #0C1210;
+    --background-tertiary: #0F1A16;
+    --background-surface: #0F1A16;
+
+    --text-primary: #F0FDF9;
+    --text-secondary: #6EE7B7;
+    --text-muted: #374151;
+
+    --border-default: rgba(52, 211, 153, 0.10);
+    --border-strong: rgba(52, 211, 153, 0.25);
+
+    --teal: #34D399;
+    --teal-light: #6EE7B7;
+    --teal-dark: #059669;
+    --teal-muted: rgba(52, 211, 153, 0.10);
+
+    --selection-bg: #34D399;
+    --selection-text: #070809;
   }
 
   [data-theme="light"] {
-    --background-primary: #FFFFFF;
-    --background-secondary: #F6F8FA;
-    --background-tertiary: #EAEEF2;
-    --background-surface: #D0D7DE;
-    --text-primary: #1F2328;
-    --text-secondary: #59636E;
-    --text-muted: #818B98;
-    --border-default: #D0D7DE;
-    --border-strong: #AFB8C1;
-    --teal: #0D9488;
-    --teal-light: #14B8A6;
-    --teal-dark: #0F766E;
+    --background-primary: #F0FDF9;
+    --background-secondary: #ECFDF5;
+    --background-tertiary: #ECFDF5;
+    --background-surface: #FFFFFF;
+
+    --text-primary: #0F1F1A;
+    --text-secondary: #065F46;
+    --text-muted: #6B7280;
+
+    --border-default: rgba(5, 150, 105, 0.12);
+    --border-strong: rgba(5, 150, 105, 0.25);
+
+    --teal: #059669;
+    --teal-light: #34D399;
+    --teal-dark: #047857;
+    --teal-muted: rgba(5, 150, 105, 0.08);
+
+    --selection-bg: #059669;
+    --selection-text: #FFFFFF;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
     background-color: var(--background-primary);
@@ -44,27 +60,12 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  ::selection {
-    background-color: var(--teal);
-    color: var(--background-primary);
-  }
+  ::selection { background-color: var(--selection-bg); color: var(--selection-text); }
 
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--background-secondary);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--border-strong);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--teal);
-  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--background-secondary); }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--teal); }
 }
 
 @layer components {
@@ -72,10 +73,9 @@
     @apply bg-background-secondary border border-border-default rounded-card;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
-
   .card-teal:hover {
-    border-color: rgba(20, 184, 166, 0.5);
-    box-shadow: 0 0 40px -10px rgba(20, 184, 166, 0.2);
+    border-color: rgba(52, 211, 153, 0.35);
+    box-shadow: 0 0 40px -10px rgba(52, 211, 153, 0.2);
   }
 
   .terminal-block {
@@ -92,8 +92,20 @@
 
   .badge-teal {
     @apply inline-flex items-center px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest font-bold;
-    background-color: rgba(20, 184, 166, 0.1);
+    background-color: var(--teal-muted);
     color: var(--teal);
-    border: 1px solid rgba(20, 184, 166, 0.3);
+    border: 1px solid var(--border-strong);
+  }
+}
+
+/* ============================================
+   HOVER ADAPTATIVO POR TEMA
+   ============================================ */
+@layer utilities {
+  html[data-theme="light"] .hover\:text-white:hover,
+  html[data-theme="light"] .group:hover .hover\:text-white,
+  html[data-theme="light"] .group:hover .group-hover\:text-white {
+    color: #000000 !important;
+    font-weight: 700 !important;
   }
 }

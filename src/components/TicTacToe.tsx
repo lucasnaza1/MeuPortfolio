@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { cnTokens } from '../utils/tokens'
-import { FaGithub, FaLinkedin } from './Icons'
+import { FaGithub, FaLinkedin, FaInstagram } from './Icons'
 
 type Player = 'X' | 'O' | null
 type BoardState = Player[][]
@@ -402,9 +402,17 @@ const TicTacToe = () => {
           naza<span className="text-teal">.dev</span>
         </div>
         <div className="font-mono text-[9px] text-text-muted uppercase tracking-widest text-center md:text-left">
-          © 2026 Lucas Nazário — Engenheiro Backend & Especialista em Tráfego Pago.
+          © 2026 Lucas Nazário — Desenvolvedor Full Stack · ForjaCorp.
         </div>
         <div className="flex gap-6 font-mono text-[9px] text-text-muted uppercase tracking-widest">
+          <a href="https://www.instagram.com/nazaaccount/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-teal transition-colors flex items-center gap-2">
+            <FaInstagram />
+            @nazaaccount
+          </a>
+          <a href="https://www.instagram.com/forjacorp/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-teal transition-colors flex items-center gap-2">
+            <FaInstagram />
+            @forjacorp
+          </a>
           <a href="https://github.com/lucasnaza1" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-teal transition-colors flex items-center gap-2">
             <FaGithub />
             GitHub

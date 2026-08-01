@@ -85,20 +85,23 @@ const TechIcons = ({ technologies = [], size = 'md', className = '' }: TechIcons
 
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
-      {filteredTechs.map((tech) => (
-        <div 
-          key={tech}
-          className="flex flex-col items-center gap-1 group"
-          title={tech}
-        >
-          <div className={`${sizeClasses[size]} flex items-center justify-center rounded-lg bg-background-secondary p-1.5 group-hover:bg-background-tertiary transition-colors`}>
-            {techIconMap[tech]}
+      {filteredTechs.map((tech) => {
+        const icon = techIconMap[tech]
+        return (
+          <div 
+            key={tech}
+            className="flex flex-col items-center gap-1 group cursor-default"
+            title={tech}
+          >
+            <div className={`${sizeClasses[size]} flex items-center justify-center rounded-lg bg-background-secondary p-1.5 group-hover:bg-background-tertiary transition-all duration-200 [&>svg]:transition-colors [&>svg]:duration-200 [&>svg]:group-hover:!text-white`}>
+              {icon}
+            </div>
+            <span className="text-[10px] font-mono text-text-secondary group-hover:text-white transition-colors duration-200">
+              {tech}
+            </span>
           </div>
-          <span className="text-[10px] font-mono text-text-secondary opacity-0 group-hover:opacity-100 transition-opacity">
-            {tech}
-          </span>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }

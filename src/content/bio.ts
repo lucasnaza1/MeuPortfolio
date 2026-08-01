@@ -14,7 +14,7 @@ export interface BioContact {
   label: string
   href: string
   handle: string
-  icon: 'linkedin' | 'instagram' | 'github' | 'mail'
+  icon: 'linkedin' | 'instagram' | 'github' | 'mail' | 'twitter'
 }
 
 export interface BioContent {
@@ -24,11 +24,17 @@ export interface BioContent {
   intro: string
   availability: string
   whatsappHref: string
+  servicesKicker: string
+  servicesTitle: string
   services: BioService[]
   authorityKicker: string
   authorityTitle: string
   authorityText: string
   signals: BioSignal[]
+  contactKicker: string
+  contactTitle: string
+  contactText: string
+  ctaSubtext: string
   contacts: BioContact[]
   footerText: string
 }
@@ -38,55 +44,72 @@ export const bio: BioContent = {
   eyebrow: 'DESENVOLVEDOR FULL STACK · ANALISTA DE SISTEMAS · AUTOMAÇÕES E IA',
   title: 'Lucas Nazário',
   intro:
-    'Desenvolvedor Full Stack • Co-fundador na ForjaCorp • Analista e Desenvolvedor de Sistemas',
-  availability: 'Disponível para projetos selecionados e contratos recorrentes',
+    'Desenvolvedor Full Stack • Co-fundador da ForjaCorp • Analista e Desenvolvedor de Sistemas',
+  availability:
+    'Disponível para projetos estratégicos, consultorias e desenvolvimento de soluções sob medida',
   whatsappHref:
     'https://wa.me/5592988174112?text=Vim%20pelo%20seu%20bio%2C%20quero%20falar%20sobre%20um%20projeto',
+  servicesKicker: 'Como posso ajudar',
+  servicesTitle: 'Tecnologia aplicada ao negócio.',
   services: [
     {
       number: '01',
       title: 'Desenvolvimento Full Stack',
       description:
-        'Sistemas, APIs e plataformas construídos com Spring, React Native, Next.js e TypeScript — do backend ao frontend.',
-      tags: ['Spring', 'React Native', 'Next.js', 'TypeScript'],
+        'Desenvolvimento de sistemas web completos, APIs REST e plataformas personalizadas, unindo back-end e front-end para entregar soluções modernas, escaláveis e de fácil manutenção.',
+      tags: ['JavaScript', 'React', 'Node.js', 'Express', 'Sequelize'],
     },
     {
       number: '02',
-      title: 'Infraestrutura e automação',
+      title: 'Sistemas, Automações e IA',
       description:
-        'Deploys, pipelines, integrações e automações com IA que reduzem trabalho manual e mantêm o sistema rodando sem fricção.',
-      tags: ['Docker', 'Coolify', 'CI/CD', 'Automações', 'IA'],
+        'Automação de processos, integrações entre plataformas e desenvolvimento de soluções inteligentes utilizando APIs, inteligência artificial e fluxos automatizados para aumentar produtividade e reduzir tarefas repetitivas.',
+      tags: ['Docker', 'Integração de APIs', 'Automações', 'Inteligência Artificial'],
     },
     {
       number: '03',
-      title: 'Tráfego pago e e-mail marketing',
+      title: 'Growth & Soluções Digitais',
       description:
-        'Campanhas, automação de e-mail marketing e otimização orientada por dados, com foco em performance e eficiência de investimento.',
-      tags: ['Google Ads', 'Meta Ads', 'E-mail Marketing'],
+        'Aplicação de tecnologia para otimizar processos comerciais e de marketing, desenvolvendo integrações, dashboards, bots, automações e soluções orientadas por dados para melhorar resultados.',
+      tags: ['Google Ads', 'Meta Ads', 'Dashboards', 'Bots', 'Analytics'],
     },
   ],
   authorityKicker: 'EXPERIÊNCIA MULTIDISCIPLINAR',
-  authorityTitle: 'Execução técnica com visão de produto.',
+  authorityTitle: 'Tecnologia com visão de negócio.',
   authorityText:
-    'Minha experiência passa por desenvolvimento full stack, automações com IA e infraestrutura de deploy. Enxergo tecnologia, marketing e operação como partes do mesmo sistema.',
+    'Como Co-fundador da ForjaCorp, desenvolvo soluções que unem desenvolvimento de software, automação, inteligência artificial e estratégia digital. Minha atuação combina conhecimentos técnicos e visão de produto para criar sistemas eficientes, escaláveis e alinhados às necessidades de cada cliente.',
   signals: [
-    { value: 'Full Stack', label: 'Spring, React Native, Next.js, TypeScript' },
-    { value: 'Co-fundador', label: 'ForjaCorp' },
-    { value: 'Spider ADS', label: 'Systems Analyst & Ads Performance' },
+    {
+      value: 'Desenvolvimento de Sistemas',
+      label: 'Criação de aplicações web full stack, APIs REST, integrações e soluções personalizadas.',
+    },
+    {
+      value: 'Banco de Dados',
+      label: 'Modelagem, persistência de dados e utilização de ORMs como Sequelize em aplicações escaláveis.',
+    },
+    {
+      value: 'Integrações',
+      label: 'Conexão entre sistemas, APIs de terceiros e automação de processos.',
+    },
+    {
+      value: 'Deploy e Infraestrutura',
+      label: 'Containerização com Docker, configuração de ambientes e publicação de aplicações.',
+    },
+    {
+      value: 'Inteligência Artificial',
+      label: 'Desenvolvimento de automações inteligentes utilizando modelos de IA para otimização de processos.',
+    },
+    {
+      value: 'Growth & Performance',
+      label: 'Experiência na integração entre tecnologia e marketing digital, criando soluções que unem automação, análise de dados e performance.',
+    },
   ],
+  contactKicker: 'Vamos conversar sobre seu projeto',
+  contactTitle: 'Transforme sua ideia em um sistema funcional.',
+  contactText:
+    'Conte sua necessidade e encontraremos a melhor solução para transformar sua ideia em um sistema funcional e escalável.',
+  ctaSubtext: 'Conte sua necessidade. Respondemos pessoalmente.',
   contacts: [
-    {
-      label: 'LinkedIn',
-      href: 'https://linkedin.com/in/lucas-nazro/',
-      handle: '/in/lucas-nazro',
-      icon: 'linkedin',
-    },
-    {
-      label: 'Instagram',
-      href: 'https://instagram.com/naza.dev',
-      handle: '@naza.dev',
-      icon: 'instagram',
-    },
     {
       label: 'GitHub',
       href: 'https://github.com/lucasnaza1',
@@ -94,10 +117,34 @@ export const bio: BioContent = {
       icon: 'github',
     },
     {
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/in/lucas-nazro/',
+      handle: '/in/lucas-nazro',
+      icon: 'linkedin',
+    },
+    {
       label: 'E-mail',
       href: 'mailto:lucasnazario.tech@gmail.com',
       handle: 'lucasnazario.tech@gmail.com',
       icon: 'mail',
+    },
+    {
+      label: 'X',
+      href: 'https://x.com/nazaaccount',
+      handle: '@nazaaccount',
+      icon: 'twitter',
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/nazaaccount/',
+      handle: '@nazaaccount',
+      icon: 'instagram',
+    },
+    {
+      label: 'ForjaCorp',
+      href: 'https://www.instagram.com/forjacorp/',
+      handle: '@forjacorp',
+      icon: 'instagram',
     },
   ],
   footerText: 'NazaDev × ForjaCorp',

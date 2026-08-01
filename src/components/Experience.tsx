@@ -5,7 +5,7 @@ import TechIcons from './TechIcons'
 const Experience = () => {
   const experiences = [
     {
-      period: 'Set/2025 – Atual',
+      period: 'Set/2025 – Jul/2026',
       title: 'Dev Full Stack, Engenheiro de Growth (MarTech) e Coord. Time de Tráfego',
       company: '4GrowthBR — Sergipe, Brasil',
       description: 'Desenvolvedor Full Stack com atuação em arquitetura de APIs REST, integrações e automações. Entrego soluções escaláveis unindo engenharia de software, MarTech e liderança técnica.',
@@ -32,46 +32,26 @@ const Experience = () => {
     },
     {
       period: 'Projeto Corporativo',
-      title: 'ADS Performance',
-      subtitle: 'Dashboard de Monitoramento de Marketing',
-      description: 'Dashboard de monitoramento em tempo real para indicadores de marketing, integrado às APIs da Meta Ads e Google Ads.',
+      title: 'Spider ADS',
+      subtitle: 'Plataforma SaaS · Coleta, Processamento e Visualização de Meta Ads',
+      description: 'Plataforma SaaS para gestores de tráfego que gerenciam múltiplas contas de clientes. Consome a Meta Graph API (v25.0) com paginação e breakdowns customizados, sincroniza métricas de forma automatizada via scheduler (node-cron) e disponibiliza dashboards analíticos com filtros por período e cliente.',
       skills: [
         'TypeScript',
         'Node.js',
         'React',
         'MySQL',
-        'API REST',
         'Meta Ads API',
-        'Google Ads API'
+        'node-cron',
+        'Dashboards'
       ],
       highlights: [
-        'Monitoramento em tempo real de indicadores de marketing',
-        'Integração com APIs da Meta Ads e Google Ads',
-        'Processamento e consolidação de dados de campanhas',
-        'Dashboards interativos para análise de performance'
+        'Meta Graph API v25.0 com paginação e breakdowns customizados',
+        'Sincronização automatizada de métricas via scheduler (node-cron)',
+        'Dashboards com filtros por período, cliente e segmentação demográfica',
+        'Ranking de criativos por métrica (ROAS, CPL, Leads, Investimento)',
+        'Acompanhamento de metas com progresso em tempo real',
+        'Suporte a múltiplas contas de anúncios gerenciadas simultaneamente'
       ]
-    },
-    {
-      period: 'Projeto Pessoal',
-      title: 'SateliteAds',
-      subtitle: 'Monitoramento de Saúde de Contas de Anúncios',
-      description: 'Plataforma para monitoramento da saúde de contas de anúncios com integrações, alertas automáticos e dashboards.',
-      skills: [
-        'TypeScript',
-        'Node.js',
-        'React',
-        'Prisma',
-        'MySQL',
-        'Meta Ads API',
-        'Google Ads API'
-      ],
-      highlights: [
-        'Monitoramento da saúde de contas de anúncios',
-        'Alertas automáticos de anomalias e quedas de performance',
-        'Integração com Meta Ads API e Google Ads API',
-        'Dashboards em tempo real com Prisma ORM'
-      ],
-      link: 'https://github.com/lucasnaza1'
     },
     {
       period: 'Projeto Pessoal',
@@ -160,7 +140,7 @@ const Experience = () => {
                 )}
               </div>
 
-              <p className="text-body text-text-secondary mb-6 flex-grow">
+              <p className="text-body text-text-secondary mb-3">
                 {exp.description}
               </p>
 
@@ -174,7 +154,7 @@ const Experience = () => {
                     {exp.skills.map((skill, skillIdx) => (
                       <span
                         key={skillIdx}
-                        className="px-3 py-1 bg-background-secondary text-text-secondary text-xs rounded-full font-mono"
+                        className="px-3 py-1 bg-background-secondary text-text-secondary text-xs rounded-full font-mono transition-colors duration-200 hover:text-white hover:bg-background-tertiary cursor-default"
                       >
                         {skill}
                       </span>
@@ -190,7 +170,7 @@ const Experience = () => {
                     {exp.highlights.map((highlight, highlightIdx) => (
                       <li
                         key={highlightIdx}
-                        className="flex items-start gap-2 text-body text-text-secondary"
+                        className="flex items-start gap-2 text-body text-text-secondary transition-colors duration-200 hover:text-white cursor-default"
                       >
                         <span className="text-teal mt-1">▸</span>
                         <span>{highlight}</span>

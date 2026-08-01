@@ -4,29 +4,33 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+  darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
         teal: {
-          DEFAULT: '#14B8A6',
-          light: '#2DD4BF',
-          dark: '#0D9488',
+          DEFAULT: 'var(--teal)',
+          light: 'var(--teal-light)',
+          dark: 'var(--teal-dark)',
         },
         background: {
-          primary: '#050505',
-          secondary: '#0D1117',
-          tertiary: '#161B22',
-          surface: '#1C2128',
+          primary: 'var(--background-primary)',
+          secondary: 'var(--background-secondary)',
+          tertiary: 'var(--background-tertiary)',
+          surface: 'var(--background-surface)',
         },
         text: {
-          primary: '#F8FAFC',
-          secondary: '#94A3B8',
-          muted: '#64748B',
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
         },
         border: {
-          default: '#21262D',
-          strong: '#30363D',
+          default: 'var(--border-default)',
+          strong: 'var(--border-strong)',
+        },
+        accent: {
+          purple: '#7C3AED',
+          'purple-light': '#9F67FF',
         },
         bio: {
           orange: '#ea6a13',
@@ -47,7 +51,7 @@ export default {
         card: '16px',
       },
       boxShadow: {
-        'teal-glow': '0 0 40px -10px rgba(20, 184, 166, 0.3)',
+        'teal-glow': '0 0 40px -10px rgba(52, 211, 153, 0.25)',
       },
       backgroundImage: {
         grid: "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 .5H40M.5 0V40\" fill=\"none\" stroke=\"rgba(255,255,255,0.03)\"/%3E%3C/svg%3E')",
