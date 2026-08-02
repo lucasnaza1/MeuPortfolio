@@ -104,14 +104,12 @@ const BioPage = () => {
         <header className="px-5 sm:px-10 py-4 sm:py-6 flex items-center justify-center relative">
           <Link
             to="/"
-            className="absolute left-5 sm:left-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-bio-orange flex items-center justify-center text-bio-orange hover:bg-bio-orange/10 transition-colors shrink-0 overflow-hidden"
+            className="absolute left-5 sm:left-10 w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-bio-orange flex items-center justify-center text-bio-orange hover:bg-bio-orange/10 transition-colors shrink-0"
             title="Voltar ao Portfólio"
           >
-            <img
-              src="/bio-assets/logo.svg"
-              alt="NazaDev"
-              className="w-full h-full object-cover"
-            />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
           </Link>
           <Link
             to="/"
@@ -237,6 +235,71 @@ const BioPage = () => {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </motion.div>
+        </motion.section>
+
+        {/* === PARCEIROS === */}
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          variants={sectionVariants}
+          className="max-w-xl mx-auto px-5 sm:px-10 py-10 sm:py-16 w-full"
+        >
+          <div className="text-center mb-6 sm:mb-8">
+            <p className="text-bio-muted text-[10px] sm:text-sm uppercase tracking-wider mb-2 font-['Roboto',sans-serif]">
+              {bio.partnersKicker}
+            </p>
+            <h2 className="text-lg sm:text-3xl font-bold text-bio-white mb-3 leading-tight">
+              {bio.partnersTitle}
+            </h2>
+            <p className="text-bio-muted text-sm sm:text-base leading-relaxed max-w-lg mx-auto">
+              {bio.partnersText}
+            </p>
+          </div>
+
+          {/* Cards de parceiros */}
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-30px' }}
+          >
+            {bio.partners.map((partner) => (
+              <motion.a
+                key={partner.name}
+                href={partner.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={cardVariants}
+                className="group bg-bio-card backdrop-blur-md border border-bio-line rounded-2xl p-4 flex items-center gap-4 hover:border-bio-orange/50 transition-colors"
+              >
+                {/* Foto no canto esquerdo */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl border-2 border-bio-orange overflow-hidden shrink-0">
+                  <img
+                    src={partner.photo}
+                    alt={partner.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Nome ao lado + função abaixo */}
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-bio-white text-base sm:text-lg font-bold leading-tight">
+                    {partner.name}
+                  </h3>
+                  <p className="text-bio-orange text-xs sm:text-sm font-['Roboto',sans-serif] mt-0.5">
+                    {partner.role}
+                  </p>
+                </div>
+
+                {/* Seta indicando link externo */}
+                <svg className="w-4 h-4 text-bio-muted group-hover:text-bio-orange transition-colors shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M7 7h10v10" />
+                </svg>
+              </motion.a>
             ))}
           </motion.div>
         </motion.section>

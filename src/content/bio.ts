@@ -17,6 +17,13 @@ export interface BioContact {
   icon: 'linkedin' | 'instagram' | 'github' | 'mail' | 'twitter'
 }
 
+export interface BioPartner {
+  name: string
+  role: string
+  photo: string
+  href: string
+}
+
 export interface BioContent {
   role: string
   eyebrow: string
@@ -27,6 +34,10 @@ export interface BioContent {
   servicesKicker: string
   servicesTitle: string
   services: BioService[]
+  partnersKicker: string
+  partnersTitle: string
+  partnersText: string
+  partners: BioPartner[]
   authorityKicker: string
   authorityTitle: string
   authorityText: string
@@ -72,6 +83,24 @@ export const bio: BioContent = {
       description:
         'Aplicação de tecnologia para otimizar processos comerciais e de marketing, desenvolvendo integrações, dashboards, bots, automações e soluções orientadas por dados para melhorar resultados.',
       tags: ['Google Ads', 'Meta Ads', 'Dashboards', 'Bots', 'Analytics'],
+    },
+  ],
+  partnersKicker: 'Parceiros',
+  partnersTitle: 'Conexões que fortalecem o trabalho',
+  partnersText:
+    'Trabalho próximo de profissionais em quem confio, ampliando cobertura e especialidade sempre que o projeto pede.',
+  partners: [
+    {
+      name: 'Matheus',
+      role: 'Dev Full Stack & Analista de Sistemas',
+      photo: '/bio-assets/matheus.png',
+      href: 'https://matheus.forjacorp.com/pt/bio',
+    },
+    {
+      name: 'Vinicius',
+      role: 'Engenheiro de Growth',
+      photo: '/bio-assets/vinicius.png',
+      href: 'https://vinicius.forjacorp.com/bio',
     },
   ],
   authorityKicker: 'EXPERIÊNCIA MULTIDISCIPLINAR',
