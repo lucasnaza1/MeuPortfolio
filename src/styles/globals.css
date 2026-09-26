@@ -109,3 +109,221 @@
     font-weight: 700 !important;
   }
 }
+
+/* ============================================
+   TILT 3D CARD
+   ============================================ */
+.tilt-card {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --glare-x: 50%;
+  --glare-y: 50%;
+  position: relative;
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: transform 0.15s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--glare-x) var(--glare-y),
+    rgba(52, 211, 153, 0.08),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tilt-card:hover .tilt-card-glare {
+  opacity: 1;
+}
+
+/* Respeita usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   ORBES DE FUNDO ANIMADAS
+   ============================================ */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.25;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orb-sm {
+  width: 300px;
+  height: 300px;
+}
+
+.orb-md {
+  width: 500px;
+  height: 500px;
+}
+
+.orb-lg {
+  width: 700px;
+  height: 700px;
+}
+
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -80px) scale(1.1); }
+  66% { transform: translate(-40px, 50px) scale(0.95); }
+}
+
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-70px, 60px) scale(0.9); }
+  66% { transform: translate(50px, -40px) scale(1.08); }
+}
+
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 70px) scale(1.12); }
+}
+
+.orb-anim-1 { animation: orb-drift-1 20s ease-in-out infinite; }
+.orb-anim-2 { animation: orb-drift-2 26s ease-in-out infinite; }
+.orb-anim-3 { animation: orb-drift-3 32s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-anim-1, .orb-anim-2, .orb-anim-3 {
+    animation: none;
+  }
+}
+
+/* ============================================
+   WHATSAPP FLOAT — BOTÃO COM BALÃO NO HOVER
+   ============================================ */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+}
+
+.wa-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  animation: wa-bob 3s ease-in-out infinite;
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.wa-btn:hover {
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+.wa-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Pulso difuso */
+.wa-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.45);
+  animation: wa-pulse 2.4s ease-out infinite;
+  z-index: -1;
+}
+
+/* Balão — revelado no hover */
+.wa-balloon {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  white-space: nowrap;
+  background: var(--background-secondary);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(-50%) translateX(8px) scale(0.9);
+  transform-origin: right center;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.wa-btn:hover .wa-balloon,
+.wa-btn:focus-visible .wa-balloon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+.wa-balloon-tail {
+  position: absolute;
+  right: -6.5px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  background: var(--background-secondary);
+  border-right: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border-strong);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Animações */
+@keyframes wa-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  70%, 100% { transform: scale(1.4); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-btn, .wa-pulse {
+    animation: none;
+  }
+  .wa-balloon {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .wa-float {
+    bottom: 16px;
+    right: 16px;
+  }
+  .wa-btn {
+    width: 52px;
+    height: 52px;
+  }
+  .wa-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .wa-balloon {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

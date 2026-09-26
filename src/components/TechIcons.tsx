@@ -68,6 +68,9 @@ const techIconMap: Record<string, React.ReactNode> = {
   'Google Ads API': <Icons.FaServer className="text-red-500" />,
   'Spring Boot': <Icons.FaCode className="text-green-600" />,
   'Expo': <Icons.FaMobileAlt className="text-blue-400" />,
+  'C# / ASP.NET': <Icons.FaCode className="text-purple-500" />,
+  'DDD': <Icons.FaCode className="text-blue-400" />,
+  'SOLID': <Icons.FaCode className="text-emerald-400" />,
 }
 
 const TechIcons = ({ technologies = [], size = 'md', className = '' }: TechIconsProps) => {

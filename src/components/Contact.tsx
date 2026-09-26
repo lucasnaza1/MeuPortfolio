@@ -23,7 +23,7 @@ const Contact = () => {
         <div className="space-y-12">
           <div className="space-y-6">
             <h3 className="text-display-title font-bold leading-tight">
-              Construindo o futuro do <span className="text-teal">backend</span>.
+              Construindo <span className="text-teal">Soluções</span> e <span className="text-teal">Sistemas</span> escaláveis.
             </h3>
             <p className="text-body text-text-secondary max-w-md leading-relaxed">
               Interessado em arquiteturas escaláveis ou microserviços? Sinta-se à vontade para entrar em contato através dos canais abaixo.

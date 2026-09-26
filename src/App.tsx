@@ -2,8 +2,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
-import TicTacToe from './components/TicTacToe'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
+import BackgroundOrbs from './components/BackgroundOrbs'
+import WhatsAppFloat from './components/WhatsAppFloat'
 import BioPage from './components/BioPage'
 
 import { useEffect, useState } from 'react'
@@ -30,9 +32,10 @@ function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background-primary text-text-primary selection:bg-teal selection:text-background-primary transition-colors duration-300">
-      {/* Texture Layer */}
+      {/* Camadas de fundo — orbes animadas + textura grid */}
+      <BackgroundOrbs />
       <div className="fixed inset-0 bg-grid opacity-20 pointer-events-none z-0" />
-      
+
       {/* Content */}
       <div className="relative z-10">
         <Navbar theme={theme} onToggleTheme={toggleTheme} />
@@ -42,8 +45,9 @@ function Portfolio() {
           <Experience />
           <Contact />
         </main>
-        <TicTacToe />
+        <Footer />
       </div>
+      <WhatsAppFloat />
     </div>
   )
 }
