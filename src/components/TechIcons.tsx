@@ -99,7 +99,7 @@ const TechIcons = ({ technologies = [], size = 'md', className = '' }: TechIcons
             <div className={`${sizeClasses[size]} flex items-center justify-center rounded-lg bg-background-secondary p-1.5 group-hover:bg-background-tertiary transition-all duration-200 [&>svg]:transition-colors [&>svg]:duration-200 [&>svg]:group-hover:!text-white`}>
               {icon}
             </div>
-            <span className="text-[10px] font-mono text-text-secondary group-hover:text-white transition-colors duration-200">
+            <span className="text-2xs font-mono text-text-secondary group-hover:text-white transition-colors duration-200">
               {tech}
             </span>
           </div>

@@ -98,7 +98,7 @@ const About = () => {
           <div className="grid grid-cols-2 gap-8 pt-6">
             {skills.map((skillGroup) => (
               <div key={skillGroup.category} className="space-y-3">
-                <span className="font-mono text-[10px] text-teal uppercase tracking-widest font-bold">
+                <span className="font-mono text-2xs text-teal uppercase tracking-widest font-bold">
                   {skillGroup.category}
                 </span>
                 <ul className="space-y-2">

@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="text-text-primary font-display font-bold text-2xl tracking-tighter">
           naza<span className="text-teal">.dev</span>
         </div>
-        <div className="font-mono text-[9px] text-text-muted uppercase tracking-widest text-center md:text-left">
+        <div className="font-mono text-2xs text-text-muted uppercase tracking-widest text-center md:text-left">
           © 2026 Lucas Nazário — Desenvolvedor Full Stack · ForjaCorp.
         </div>
-        <div className="flex gap-6 font-mono text-[9px] text-text-muted uppercase tracking-widest">
+        <div className="flex gap-6 font-mono text-2xs text-text-muted uppercase tracking-widest">
           <a href="https://www.instagram.com/nazaaccount/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:text-teal transition-colors flex items-center gap-2">
             <FaInstagram />
             @nazaaccount

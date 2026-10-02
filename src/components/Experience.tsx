@@ -85,14 +85,14 @@ const Experience = () => {
             >
             <div className="flex flex-col h-full">
               <div className="mb-4">
-                <span className="font-mono text-xs text-teal uppercase tracking-wider">
+                <span className="font-mono text-2xs text-teal uppercase tracking-wider">
                   {exp.period}
                 </span>
-                <h3 className="text-display-title font-bold mt-2">
+                <h3 className="text-display-title font-bold mt-2 text-text-primary">
                   {exp.title}
                 </h3>
                 {exp.company && (
-                  <p className="text-body font-medium text-text-primary mt-1">
+                  <p className="text-sm text-text-secondary mt-1 font-medium">
                     {exp.company}
                   </p>
                 )}
@@ -104,7 +104,7 @@ const Experience = () => {
 
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-mono text-xs text-text-secondary uppercase tracking-wider mb-2">
+                  <h4 className="font-mono text-2xs text-text-muted uppercase tracking-wider mb-2">
                     Competências
                   </h4>
                   <TechIcons technologies={exp.skills} size="md" className="mb-3" />
@@ -121,7 +121,7 @@ const Experience = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-mono text-xs text-text-secondary uppercase tracking-wider mb-2">
+                  <h4 className="font-mono text-2xs text-text-muted uppercase tracking-wider mb-2">
                     Destaques
                   </h4>
                   <ul className="space-y-2">

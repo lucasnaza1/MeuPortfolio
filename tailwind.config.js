@@ -48,7 +48,7 @@ export default {
         sans: ['DM Sans', 'sans-serif'],
       },
       borderRadius: {
-        card: '16px',
+        card: '1rem',
       },
       boxShadow: {
         'teal-glow': '0 0 40px -10px rgba(52, 211, 153, 0.25)',
@@ -67,11 +67,14 @@ export default {
         },
       },
       fontSize: {
-        'label': ['12px', { lineHeight: '16px', letterSpacing: '0.025em' }],
-        'body': ['16px', { lineHeight: '28px' }],
-        'display-hero': ['120px', { lineHeight: '0.9', letterSpacing: '-0.04em' }],
-        'display-section': ['48px', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-title': ['24px', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+        // Escala tipográfica em rem — escala com a preferência do usuário
+        '2xs': ['0.625rem', { lineHeight: '1rem' }],
+        'label': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.025em' }],
+        'body': ['1rem', { lineHeight: '1.75rem' }],
+        // clamp() = fluido: cresce com o viewport sem cortar em telas pequenas
+        'display-hero': ['clamp(3.25rem, 10vw, 7.5rem)', { lineHeight: '0.9', letterSpacing: '-0.04em' }],
+        'display-section': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-title': ['clamp(1.25rem, 2.5vw, 1.5rem)', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

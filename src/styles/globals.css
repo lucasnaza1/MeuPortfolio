@@ -14,8 +14,8 @@
     --background-surface: #0F1A16;
 
     --text-primary: #F0FDF9;
-    --text-secondary: #6EE7B7;
-    --text-muted: #374151;
+    --text-secondary: #A7F3D0;
+    --text-muted: #6EE7B7;
 
     --border-default: rgba(52, 211, 153, 0.10);
     --border-strong: rgba(52, 211, 153, 0.25);
@@ -30,24 +30,27 @@
   }
 
   [data-theme="light"] {
-    --background-primary: #F0FDF9;
-    --background-secondary: #ECFDF5;
-    --background-tertiary: #ECFDF5;
-    --background-surface: #FFFFFF;
+    /* Light: base neutra off-white para não "brigar" com o verde */
+    --background-primary: #FAFAF7;
+    --background-secondary: #FFFFFF;
+    --background-tertiary: #F0F4F1;
+    --background-surface: #F5F8F6;
 
-    --text-primary: #0F1F1A;
-    --text-secondary: #065F46;
-    --text-muted: #6B7280;
+    /* Texto em cinza-esverdeado escuro: contraste AA sobre branco */
+    --text-primary: #0B2B20;
+    --text-secondary: #14503C;
+    --text-muted: #5B7A6C;
 
-    --border-default: rgba(5, 150, 105, 0.12);
-    --border-strong: rgba(5, 150, 105, 0.25);
+    --border-default: rgba(4, 120, 87, 0.14);
+    --border-strong: rgba(4, 120, 87, 0.30);
 
-    --teal: #059669;
-    --teal-light: #34D399;
-    --teal-dark: #047857;
-    --teal-muted: rgba(5, 150, 105, 0.08);
+    /* Verde mais profundo no light: legível sobre fundo claro */
+    --teal: #047857;
+    --teal-light: #059669;
+    --teal-dark: #065F46;
+    --teal-muted: rgba(4, 120, 87, 0.08);
 
-    --selection-bg: #059669;
+    --selection-bg: #047857;
     --selection-text: #FFFFFF;
   }
 
@@ -91,7 +94,7 @@
   }
 
   .badge-teal {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest font-bold;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-2xs font-mono uppercase tracking-widest font-bold;
     background-color: var(--teal-muted);
     color: var(--teal);
     border: 1px solid var(--border-strong);

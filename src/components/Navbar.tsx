@@ -25,7 +25,7 @@ const Navbar = ({ theme, onToggleTheme }: NavbarProps) => {
             <a
               key={link.name}
               href={link.href}
-              className="font-mono text-[12px] uppercase tracking-widest text-text-secondary hover:text-teal transition-colors duration-300"
+              className="font-mono text-label uppercase tracking-widest text-text-secondary hover:text-teal transition-colors duration-300"
             >
               {link.name}
             </a>

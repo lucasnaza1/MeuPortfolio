@@ -75,7 +75,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="card-teal p-8 sm:p-10 md:p-12 flex flex-col justify-center items-start space-y-6"
         >
-          <span className="font-mono text-[10px] text-text-muted uppercase tracking-widest">Contato Direto</span>
+          <span className="font-mono text-2xs text-text-muted uppercase tracking-widest">Contato Direto</span>
           <h4 className="text-xl font-bold text-text-primary">Prefere uma conversa em tempo real?</h4>
           <p className="text-sm text-text-secondary leading-relaxed">
             Clique no botão abaixo para iniciar uma conversa diretamente comigo no WhatsApp. Respondo assim que possível.
